@@ -1,13 +1,11 @@
 package main
 
-import "fmt"
-
-func Cat() string {
-	word := "Miao"
-	return fmt.Sprintf("%s~~~~~", word)
-}
+import (
+	"fmt"
+	"github-action-demo/pets"
+)
 
 func main() {
-	saying := Cat()
+	saying := pets.Cat()
 	fmt.Print(saying)
 }
