@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func Cat() string {
-	return "Miao~~~~~"
+	word := "Miao"
+	return fmt.Sprintf("%s~~~~~", word)
 }
 
 func main() {
