@@ -10,6 +10,8 @@ jobs:
 
   myci:
     runs-on: ubuntu-latest
+    env:
+      GO111MODULE: on
     steps:
     - uses: actions/checkout@v2
 
@@ -25,6 +27,12 @@ jobs:
       uses: golangci/golangci-lint-action@v2
       with:
         version: v1.29
+
+    - name: Run Gosec Security Scanner
+      run: |
+        export PATH=$PATH:$(go env GOPATH)/bin
+        go get github.com/securego/gosec/cmd/gosec
+        gosec ./...
 
     - name: Test
       run: go test -v ./...
