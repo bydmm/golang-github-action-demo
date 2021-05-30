@@ -30,6 +30,3 @@
 
 ## Github Action
 总体介绍参考这个[文档](https://docs.github.com/cn/actions)，本项目将会使用Github提供的Golang向导创建出一个功能完备，但是又非常简单容易使用的Golang CI Demo供大家使用。
-
-
-

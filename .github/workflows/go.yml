@@ -26,6 +26,11 @@ jobs:
       with:
         version: v1.29
 
+    - name: Run Gosec Security Scanner
+        uses: securego/gosec@master
+        with:
+          args: ./...
+
     - name: Test
       run: go test -v ./...
 
