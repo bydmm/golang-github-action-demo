@@ -22,9 +22,9 @@ jobs:
       run: go build -v ./...
 
     - name: golangci-lint
-        uses: golangci/golangci-lint-action@v2
-        with:
-          version: v1.29
+      uses: golangci/golangci-lint-action@v2
+      with:
+        version: v1.29
 
     - name: Test
       run: go test -v ./...
